@@ -23,7 +23,7 @@ NRQL2 = """
     {
         actor{
             account(id: 3796945){
-                nrql(query: "SELECT sum(click) AS 'Clicks', sum(conversion) as 'Conversions' FROM PageAction FACET vid, aid, dateOf(timestamp) SINCE today"){
+                nrql(query: "SELECT sum(click) AS 'Clicks', sum(conversion) as 'Conversions' FROM PageAction FACET vid, aid, dateOf(timestamp) SINCE 24 hours ago"){
                     results
                 }
             }
